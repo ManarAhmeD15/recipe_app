@@ -105,17 +105,27 @@ class _LoginScreenState extends State<LoginScreen> {
                             style: TextStyle(color: Colors.grey[500]),
                             keyboardType: TextInputType.emailAddress,
                             decoration: InputDecoration(
+                              errorBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(20),
 
+                                  borderSide: BorderSide(color: Colors.red,width: 2)
+                              ),
                               hintText: "Enter your email",
                               hintStyle: TextStyle(color: Colors.grey[400]),
-                              filled: true,
-                              fillColor: Colors.white,
-                              border: OutlineInputBorder(),
+                              //filled: true,
+                              //fillColor: Colors.white,
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20)
+                              ),
                               prefixIcon: Icon(Icons.email,color: AppColors.backColor,),
                               enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(20),
+
                                   borderSide: BorderSide(color: Colors.white,width: 2)),
                               focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide(
+                                  width: 2,
                                   color: AppColors.backColor,
                                 ),
                               ),
@@ -135,6 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(
                           width: size.width,
                           child: TextFormField(
+
                             style: TextStyle(color: Colors.grey[500]),
 
                             validator: (String? input) {
@@ -149,9 +160,16 @@ class _LoginScreenState extends State<LoginScreen> {
                             keyboardType: TextInputType.visiblePassword,
                             focusNode: passwordFocusNode,
                             decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
+                              errorBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(20),
+
+                                  borderSide: BorderSide(color: Colors.red,width: 2)
+                              ),
+
+                              //filled: true,
+                              //fillColor: Colors.white,
                               hintText: "Enter your password",
+
                               hintStyle: TextStyle(color: Colors.grey[400]),
                               prefixIcon: Icon(Icons.lock,color: AppColors.backColor,),
                               suffixIcon: IconButton(
@@ -162,13 +180,19 @@ class _LoginScreenState extends State<LoginScreen> {
                                 }, icon: _isObscured ? Icon(Icons.visibility,color: AppColors.backColor,) :Icon(Icons.visibility_off,color: AppColors.backColor,),
 
                               ),
-                              border: OutlineInputBorder(),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(66),
+
+                              ),
                               focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide(
+                                  width: 2,
                                   color: AppColors.backColor,
                                 ),
                               ),
                               enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide(color: Colors.white,width: 2)
                               ),
                               // labelText: 'Password'
