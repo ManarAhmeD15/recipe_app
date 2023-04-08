@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:recipe_app/constants/color.dart';
+import 'package:recipe_app/layout/layout.dart';
+import 'package:recipe_app/pages/signup_screen.dart';
 
 import 'home_screen.dart';
 
@@ -144,7 +147,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         SizedBox(
                           width: size.width,
-                          child: TextFormField(
+                          child:
+                          TextFormField(
 
                             style: TextStyle(color: Colors.grey[500]),
 
@@ -204,7 +208,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 20,
                         ),
                         Center(
-                            child: ElevatedButton(
+                            child:
+                            ElevatedButton(
                               style: ElevatedButton.styleFrom(
                               backgroundColor: AppColors.backColor,
                                 shape: RoundedRectangleBorder(
@@ -214,7 +219,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                 setState(() {
                                   print(_formKey.currentState!.validate());
                                   _formKey.currentState!.validate()
-                                      ? Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomeScreen())): null;
+                                      ? Get.to(Layout()): Get.showSnackbar(
+                                      GetSnackBar(
+                                          title: 'Error',
+                                          message: 'Enter some text',
+                                          backgroundColor: Colors.red,
+                                          duration: Duration(seconds: 3,),
+                                      ));
                                 });
                               },
 
@@ -234,7 +245,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                             )),
 
-                        const Padding(
+                         Padding(
                           padding: EdgeInsets.symmetric(vertical: 80.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -248,8 +259,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               SizedBox(width: 8,),
 
-                              Text("Register Now ",style: TextStyle(fontSize: 18,
-                                  color: AppColors.backColor),
+                              TextButton(
+                               onPressed: () {
+                                  Get.to(SignUp());
+                                },
+                                child: Text("Register Now ",style: TextStyle(fontSize: 18,
+                              color: AppColors.backColor)),
                               ),
 
                             ],

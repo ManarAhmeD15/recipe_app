@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:recipe_app/models/recipe_model.dart';
 
 class RecipeApi {
-  static Future<List<Recipe>> getRecipe() async {
+   static Future<List<Recipe>> getRecipe() async {
     var uri = Uri.https('yummly2.p.rapidapi.com', '/feeds/list',
         {"limit": "18", "start": "0",
         "tag":"list.recipe.popular",
@@ -28,7 +28,10 @@ class RecipeApi {
       //_detail.add(i['display']);
     }
 
-    return Recipe.recipesFromSnapshot(_temp);
+    return Future.delayed(Duration(seconds: 4),(){
+      return Recipe.recipesFromSnapshot(_temp);
+
+    });
   }
 
   // static Future<List<Recipe>> getDetails() async {

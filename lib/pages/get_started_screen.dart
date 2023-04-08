@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:recipe_app/pages/login_screen.dart';
 
@@ -64,7 +66,7 @@ class GetStartedScreen extends StatelessWidget {
                 const SizedBox(height: 32),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>LoginScreen()));
+                    Get.to(LoginScreen());
                   },
                   child: Container(
                     height: 66,

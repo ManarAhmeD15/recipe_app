@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:lottie/lottie.dart';
 import 'package:recipe_app/pages/get_started_screen.dart';
 
@@ -30,8 +32,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     {
 
       if(status==AnimationStatus.completed)
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>GetStartedScreen()));
-
+        Get.to(GetStartedScreen());
 
        }
      );
