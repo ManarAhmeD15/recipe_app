@@ -13,7 +13,7 @@ import 'package:recipe_app/pages/splash_screen.dart';
   runApp(
     GetMaterialApp(
     debugShowCheckedModeBanner: false,
-    home: LoginScreen(),
+    home: SignUp(),
     // routes: {
     //   'splash': (context)=>SplashScreen(),
     //   'login':(context)=>LoginScreen(),
