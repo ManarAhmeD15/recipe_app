@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:recipe_app/constants/color.dart';
 import 'package:recipe_app/layout/layout.dart';
-import 'package:recipe_app/pages/signup_screen.dart';
+import 'package:recipe_app/pages/signup/signup_screen.dart';
 
 import 'home_screen.dart';
 

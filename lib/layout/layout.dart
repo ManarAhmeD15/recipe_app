@@ -19,10 +19,11 @@ class Layout extends StatelessWidget {
   builder: (context, state) {
     final AppCubit cubit =AppCubit.get(context);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         bottomNavigationBar: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(topRight: Radius.circular(30),topLeft: Radius.circular(30)),
+           // borderRadius: BorderRadius.only(topRight: Radius.circular(30),topLeft: Radius.circular(30)),
             color: AppColors.backColor,
 
           ),

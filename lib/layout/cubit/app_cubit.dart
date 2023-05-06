@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:recipe_app/pages/get_started_screen.dart';
 import 'package:recipe_app/pages/home_screen.dart';
 
+import '../../pages/profile/profile_screen.dart';
 import '../../pages/setting/setting_screen.dart';
 
 
@@ -16,7 +17,7 @@ class AppCubit extends Cubit<AppState> {
   List screens=
   [
     HomeScreen(),
-    GetStartedScreen(),
+    ProfileScreen(),
     SettingScreen(),
 
 

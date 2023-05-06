@@ -38,11 +38,12 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  Recipe? item;
+  //Recipe? item;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: AppColors.backColor,

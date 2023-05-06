@@ -4,8 +4,11 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:recipe_app/pages/details_screen.dart';
 import 'package:recipe_app/pages/home_screen.dart';
 import 'package:recipe_app/pages/login_screen.dart';
-import 'package:recipe_app/pages/signup_screen.dart';
+import 'package:recipe_app/pages/setting/setting_screen.dart';
+import 'package:recipe_app/pages/signup/signup_screen.dart';
 import 'package:recipe_app/pages/splash_screen.dart';
+
+import 'layout/layout.dart';
 
  main() async{
   WidgetsFlutterBinding.ensureInitialized();   //بتأكد ان الحاجات معمولها انتجرشن
@@ -13,7 +16,7 @@ import 'package:recipe_app/pages/splash_screen.dart';
   runApp(
     GetMaterialApp(
     debugShowCheckedModeBanner: false,
-    home: SignUp(),
+    home: SplashScreen(),
     // routes: {
     //   'splash': (context)=>SplashScreen(),
     //   'login':(context)=>LoginScreen(),
